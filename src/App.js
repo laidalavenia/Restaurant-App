@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import CONFIG from "./global/config";
+import "./App.scss";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import axios from "axios";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+// import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
+import HomeRestaurant from "./pages/HomeRestaurant";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<HomeRestaurant />} />
+    </Routes>
   );
 }
 
